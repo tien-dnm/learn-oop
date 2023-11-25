@@ -3,15 +3,22 @@
     public abstract class Vehicle
     {
         private int speed;
-        public virtual int maxSpeed { get; }
+        public virtual int MaxSpeed
+        {
+            get
+            {
+                // bắt buộc phải khai báo maxSpeed khi tạo class kế thừa
+                throw new NotImplementedException();
+            }
+        }
         public int Speed
         {
             get { return speed; }
             set
             {
-                if (value > maxSpeed)
+                if (value > MaxSpeed)
                 {
-                    speed = maxSpeed;
+                    speed = MaxSpeed;
                 }
                 else
                 {

@@ -2,11 +2,14 @@
 // Lớp trừu tượng = cho biết các thành phần bị thiếu hoặc việc triển khai chưa đầy đủ
 using VehicleLibs;
 
-Car car = new Car();
-Bicycle bicycle = new Bicycle();
-Boat boat = new Boat();
-// không thể khởi tạo với từ khoá new
-//Vehicle vehicle = new Vehicle(); ❌
-
+Car car = new();
+Bicycle bicycle = new();
+Boat boat = new();
+//Vehicle vehicle = new Vehicle();
+Console.ForegroundColor = ConsoleColor.Green;
+Console.Error.WriteLine("It is not possible to create an object of the Vehicle class");
+Console.ForegroundColor = ConsoleColor.Red;
+Console.Error.WriteLine("Vehicle vehicle = new Vehicle();");
+Console.ResetColor();
 
 Console.ReadKey();
